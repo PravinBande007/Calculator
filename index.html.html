@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+			text-align: center;
+			box-shadow: gray;
+		}
+		.mdiv{
+			height: 100vh;
+			width: 100%;
+			position: fixed;
+			top: 0px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-image: url('https://img.freepik.com/premium-vector/calculator-background_16643-2998.jpg');
+			background-size: cover;
+		}
+		.calc{
+			height: 500px;
+			width: 250px;
+			background-color: black;
+			border-radius: 50px;
+			box-shadow: 0px 0px 30px grey;
+
+		}
+		.op{
+			text-align: right;
+			border: black solid;
+			background-color: black;
+			color: white;
+			height: 100px;
+			width: 80%;
+			font-size: 30px;
+		}
+		.circle{
+			height: 60px;
+			width: 50px;
+			border-radius: 50%;
+			border: black solid;
+			color: white;
+		}
+		form{
+			margin-top: 75px;
+		}
+		.color{
+			background-color: rgb(79,76,76);
+			border-color: black;
+			color: white;	
+			font-weight: bolder;
+		}
+		.colorb{
+			background-color: orange;
+			color: white;
+			font-weight: bolder;
+		}
+		.zero{
+			width: 105px;
+			border-radius: 50px !important;
+		}
+		.colora{
+			background-color: darkgrey;
+			border-color: black;
+			color: white;	
+			font-weight: bolder;
+		}
+	</style>
+</head>
+<body>
+	<div class="mdiv">
+		<div class="calc">
+			<form>
+				<div>
+					<input type="text" name="op" class="op" placeholder="0">
+				</div>
+				<div>
+					<input type="button" name="AC" value="AC" onclick="op.value=' '" class="circle colora">
+					<input type="button" name="C" value="C" onclick="op.value=Math.floor(op.value/10)" class="circle colora">
+					<input type="button" name="mod" value="%" onclick="op.value+='%'" class="circle colora">
+					<input type="button" name="operator" value="/" onclick="op.value+='/'" class="circle colorb">
+				</div>
+				<div>
+					<input type="button" name="number" value="7" onclick="op.value+='7'" class="circle color">
+					<input type="button" name="number" value="8" onclick="op.value+='8'" class="circle color">
+					<input type="button" name="number" value="9" onclick="op.value+='9'" class="circle color">
+					<input type="button" name="operator" value="X" onclick="op.value+='*'" class="circle colorb">
+				</div>
+				<div>
+					<input type="button" name="number" value="4" onclick="op.value+='4'" class="circle color">
+					<input type="button" name="number" value="5" onclick="op.value+='5'" class="circle color">
+					<input type="button" name="number" value="6" onclick="op.value+='6'" class="circle color">
+					<input type="button" name="operator" value="-" onclick="op.value+='-'" class="circle colorb">
+				</div>
+				<div>
+					<input type="button" name="number" value="1" onclick="op.value+='1'" class="circle color">
+					<input type="button" name="number" value="2" onclick="op.value+='2'" class="circle color">
+					<input type="button" name="number" value="3" onclick="op.value+='3'" class="circle color">
+					<input type="button" name="operator" value="+" onclick="op.value+='+'" class="circle colorb">
+				</div>
+				<div>
+					<input type="button" name="number" value="0" onclick="op.value+='0'" class="circle color zero">
+	
+					<input type="button" name="operator" value="." onclick="op.value+='.'" class="circle color">
+					<input type="button" name="operator" value="=" onclick="op.value=eval(op.value)" class="circle colorb">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
